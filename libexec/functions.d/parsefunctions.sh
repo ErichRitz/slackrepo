@@ -204,8 +204,8 @@ function find_items
       prgnam=$(basename "$newitemid")
       dirnam="$newitemid"
       filenam=""
-      [ -f "$SR_SBREPO/${dirnam}/${prgnam}.SlackBuild" ] && filenam="${prgnam}.SlackBuild"
       [ -f "$SR_SBREPO/${dirnam}/${prgnam}" ] && filenam="${prgnam}"
+      [ -f "$SR_SBREPO/${dirnam}/${prgnam}.SlackBuild" ] && filenam="${prgnam}.SlackBuild"
     else # "$lookuptype" = '-s'
       filenam=$(basename "${object}")
       prgnam="${filenam%.SlackBuild}"
